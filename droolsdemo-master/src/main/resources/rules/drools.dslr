@@ -1,0 +1,25 @@
+package rules;
+dialect  "java"
+import com.example.droolsdemo.pojo.*;
+//使用自己定义的dsl规则,为了使用户关心问题描述而不会关心程序(使用中文描述)
+expander drools.dsl
+
+//规则test01
+//参数是double类型
+rule "test01"
+    when
+        如果数据是double类型;
+    then
+        输出这个数据;
+end
+
+//test02规则
+//与drools.dsl配置整合,可以使用中文描述
+rule "test02"
+    when
+        如果用户名字叫"浅然";
+        并且(年龄是20);
+        并且(性别是"男");
+    then
+        "符合规则";
+end
