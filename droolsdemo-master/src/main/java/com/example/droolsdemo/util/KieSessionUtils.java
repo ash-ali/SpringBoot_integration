@@ -13,6 +13,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 /**
  *
+ *
  * 1.维护了有状态和无状态的两种Session对象，不推荐使用get。
  * 2.全局的Session已经在config下的Configuration中自动装配了。
  * 3.无并发的情况下，使用newKieSession()既可。
